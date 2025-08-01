@@ -47,6 +47,37 @@ Salida esperada:
 [+] ¡Contraseña encontrada!: P@ssw0rd!
 ```
 
+Pero cuando llega a un numero maximo de solicitudes o un numero maximo de sesiones activas, podemos ver igualmente la contraseñas con estos mensajes de aquí:
+
+```
+[+] Verificando objetivo 192.168.1.38...
+[+] Objetivo válido, iniciando fuerza bruta contra .\Administrator con rockyou.txt
+
+[1] Probando password: deonta
+[2] Probando password: dennis2
+[3] Probando password: P@ssw0rd!
+[!] WARNING: Se ha excedido el límite de sesiones permitidas para este usuario.
+[!] Hay que esperar a que alguna sesión se cierre antes de seguir intentando.
+```
+
+> Con esto sabemos que la contraseña de dicho usuario en este caso seria `P@ssw0rd!` aunque el numero maximo de intentos haya saltado, pero no esta dando la pista de que esa es su contarseña.
+
+Lo mismo pasa con este otro mensaje de aquí:
+
+```
+[+] Verificando objetivo 192.168.1.38...
+[+] Objetivo válido, iniciando fuerza bruta contra .\d1se0 con rockyou.txt
+
+[1] Probando password: deonta
+[2] Probando password: dennis2
+[3] Probando password: P@ssw0rd!
+[4] Probando password: diseo
+[!] WARNING: Usuario .\d1se0 no tiene privilegios para iniciar sesión PSWA.
+[!] El acceso remoto PowerShell puede estar deshabilitado o restringido para este usuario.
+```
+
+> Con ete mensaje sabemos que la contraseña del usuario `d1se0` es `diseo` pero no tiene privilegios para establecer una sesion Web, igualemente nos da la pista de que a nivel de sistema tiene dicha contraseña.
+
 ---
 
 ## ⚙️ Preparación de un Entorno de Pruebas en Windows Server 2019/2022
